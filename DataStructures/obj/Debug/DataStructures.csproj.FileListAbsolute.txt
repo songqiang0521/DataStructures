@@ -1,0 +1,4 @@
+D:\git\DataStructures\DataStructures\bin\Debug\DataStructures.dll
+D:\git\DataStructures\DataStructures\bin\Debug\DataStructures.pdb
+D:\git\DataStructures\DataStructures\obj\Debug\DataStructures.dll
+D:\git\DataStructures\DataStructures\obj\Debug\DataStructures.pdb
