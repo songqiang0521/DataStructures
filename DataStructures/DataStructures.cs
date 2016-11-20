@@ -36,7 +36,12 @@ namespace ADS_Library
         public ADS_LinkedListNode<T> Previous { get; internal set; }
     }
 
-    public class ADS_LinkedList<T> : System.Collections.Generic.ICollection<T>
+    /// <summary>
+    /// 与.NET区别:这不是一个循环链表
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    [DebuggerDisplay("Count = {Count}")]
+    public class ADS_LinkedList<T> : ICollection<T>
     {
         private ADS_LinkedListNode<T> _head;
         private ADS_LinkedListNode<T> _tail;
@@ -276,7 +281,7 @@ namespace ADS_Library
 
     #region ArrayList<T>
 
-    public class ArrayList<T> : System.Collections.Generic.IList<T>
+    public class ArrayList<T> : IList<T>
     {
         T[] _items;
 
@@ -425,7 +430,7 @@ namespace ADS_Library
             return false;
         }
 
-        public System.Collections.Generic.IEnumerator<T> GetEnumerator()
+        public IEnumerator<T> GetEnumerator()
         {
             for (int i = 0; i < Count; i++)
             {
@@ -433,7 +438,7 @@ namespace ADS_Library
             }
         }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        System.Collections.IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
         }
